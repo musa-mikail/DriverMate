@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.googleservicerapi.MainActivity"
+    android:background="@drawable/img_background">
+    <RelativeLayout
+        android:id="@+id/upper_panel"
+        android:layout_width="match_parent"
+        android:layout_height="234dp"
+        android:background="@drawable/img_speed_background">
+        
+        <ImageView
+            android:id="@+id/imgTimer"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/img_clock"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            />
+        <Chronometer
+            android:id="@+id/chrTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:text=""
+            android:textColor="@color/green_text"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="30dp"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/imgTimer"
+            />
+
+        <ImageView
+            android:id="@+id/imgAccelerate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/img_accelerate"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/imgTimer"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:id="@+id/txtAccelerate"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:text="--"
+            android:textColor="@color/green_text"
+            android:textSize="15sp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/chrTimer"
+            android:layout_toRightOf="@+id/imgAccelerate"
+            />
+
+        <ImageView
+            android:id="@+id/imgDistance"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/img_distance"
+            android:layout_toRightOf="@id/chrTimer"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:id="@+id/txtDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="@color/green_text"
+            android:textSize="15sp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/imgDistance"/>
+
+        <ImageView
+            android:id="@+id/imgHA"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/img_accelerate"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="30dp"
+            />
+        <TextView
+            android:id="@+id/txtHA"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:text="-"
+            android:textColor="@color/red_text"
+            android:textSize="15sp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imgHA"/>
+
+        <ImageView
+            android:id="@+id/imgHB"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/txtHA"
+            android:adjustViewBounds="false"
+            android:src="@drawable/img_brake" />
+        <TextView
+            android:id="@+id/txtHB"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:text="-"
+            android:textColor="@color/red_text"
+            android:textSize="15sp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imgHB"/>
+
+        <ImageView
+            android:id="@+id/imgperform"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/img_perform"
+            android:layout_toRightOf="@id/txtHB"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/txtperform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/imgperform"
+            android:text="---"
+            android:textColor="@color/black_text"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/txtSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="-"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:textColor="@color/green_text"/>
+
+        <TextView
+            android:id="@+id/txtSpeedUnits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtSpeed"
+            android:layout_alignBaseline="@+id/txtSpeed"
+            android:textSize="15sp"
+            android:textColor="@color/green_text"
+            android:text="km/h"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/img_midpanel"
+        android:layout_below="@+id/upper_panel"
+        android:layout_marginTop="0dp">
+
+        <Button
+            android:id="@+id/btnsummary"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="64dp"
+            android:background="@drawable/img_summary" />
+
+        <Button
+            android:id="@+id/btnsettings"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/img_settings" />
+
+        <Button
+            android:id="@+id/btnmap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="64dp"
+            android:layout_toRightOf="@id/btnsettings"
+            android:background="@drawable/img_heatmap" />
+    </RelativeLayout>
+</RelativeLayout>
