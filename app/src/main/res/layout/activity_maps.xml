@@ -1,8 +1,91 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    tools:context="com.example.dell.googleservicerapi.MapsActivity" />
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+	<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.dell.googleservicerapi.MapsActivity"
+	        android:layout_marginTop="2dp"/>
+
+	<TextView
+		android:id="@+id/locationTitleTxt"
+		android:text="@string/location_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="15sp"
+		android:textStyle="bold"
+		android:textColor="@color/black_text"
+		android:layout_marginTop="2dp"/>
+
+	<TextView
+		android:id="@+id/locationTxt"
+		android:text="@string/map_info"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="15sp"
+		android:textColor="@color/black_text"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@id/locationTitleTxt"
+		android:layout_marginTop="2dp"/>
+
+	<ImageView
+		android:id="@+id/imgHA"
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:src="@drawable/img_accelerate"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="5dp"
+		android:layout_marginBottom="30dp"
+		/>
+	<TextView
+		android:id="@+id/txtHA"
+		android:layout_width="wrap_content"
+		android:layout_height="22dp"
+		android:text="-"
+		android:textColor="@color/red_text"
+		android:textSize="15sp"
+		android:layout_marginLeft="3dp"
+		android:textStyle="bold"
+		android:layout_marginBottom="30dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@+id/imgHA"/>
+
+	<ImageView
+		android:id="@+id/imgHB"
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="30dp"
+		android:layout_marginLeft="10dp"
+		android:layout_toRightOf="@+id/txtHA"
+		android:adjustViewBounds="false"
+		android:src="@drawable/img_brake" />
+	<TextView
+		android:id="@+id/txtHB"
+		android:layout_width="wrap_content"
+		android:layout_height="22dp"
+		android:text="-"
+		android:textColor="@color/red_text"
+		android:textSize="15sp"
+		android:layout_marginLeft="3dp"
+		android:layout_marginBottom="30dp"
+		android:layout_alignParentBottom="true"
+		android:textStyle="bold"
+		android:layout_toRightOf="@+id/imgHB"/>
+	
+	<Button
+		android:layout_width="50dp"
+		android:layout_height="50dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/img_play"
+		android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>

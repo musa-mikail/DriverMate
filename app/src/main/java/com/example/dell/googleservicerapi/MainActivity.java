@@ -30,6 +30,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.gson.Gson;
 
 import java.util.Locale;
 
@@ -94,15 +95,23 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         data = new Data(); //Reference to the data object
 
-        Log.w(data.toString(),"Test");
+
 
         btnmap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,MapsActivity.class));
+                Intent intent = new Intent(MainActivity.this,MapsActivity.class);
+                intent.putExtra("sentData",convertDataToGSON(data));
+                startActivity(intent);
             }
         });
         InializeTimer();//Setup the timer in preparation for starting using the start button
+    }
+
+    private String convertDataToGSON(Data data) {
+        Gson myGson = new Gson();
+        String dataString = myGson.toJson(data);
+        return dataString;
     }
 
 
